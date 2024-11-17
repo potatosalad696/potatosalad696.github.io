@@ -1,1 +1,1 @@
-# potatosalad696.github.io
+# Fractal Generator
