@@ -1,5 +1,7 @@
 # Fractal Generator
 
+hi
+
 ## Later (To-do)
 - Add more fractals
 - Add a "share fractal" option
