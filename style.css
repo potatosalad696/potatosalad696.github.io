@@ -18,6 +18,9 @@ header {
 
 header h1 {
     font-size: 5vh;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
