@@ -1,0 +1,24 @@
+body {
+    font-family: sans-serif;
+}
+
+input {
+    margin-left: 0.25vw;
+    width: 5vw
+}
+
+div {
+    margin-top: 1vh;
+}
+
+button {
+    margin-right: 0.25vw;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 1vw;
+    text-align: right;
+}
