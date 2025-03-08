@@ -38,7 +38,7 @@ function calculateArea() {
 
 function update() {
     area = calculateArea()
-    document.getElementById("area").innerHTML = `Area: ${area} unit(s)`
+    document.getElementById("area").innerHTML = `Area: ${area} unit²`
 
     console.log("goo goo gaa gaa")
     /*
