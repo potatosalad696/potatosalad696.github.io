@@ -1,6 +1,7 @@
 # Fractals!
 ## Features
-<b>Latest version: 2.0.0 Iteration 1</b>
+**Latest version: 1.0.0**
+**Latest beta: 2.0.0 Iteration 1**
 
 - Fractal tree
 - Sierpinski triangle
