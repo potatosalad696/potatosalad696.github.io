@@ -6,6 +6,8 @@
 - Coming soon!
 
 ### 2.0.0 Iteration 2
+- Added functionalities to the "add" and "remove" button
+- Added a new button: the "reset" button
 - Shoelace formula can now accept infinite vertices
 - Added style to the shoelace formula page to match other pages
 

@@ -6,7 +6,7 @@
 - Fractals
     - Fractal tree
     - Sierpinski triangle
-- Others
+- Tools
     - Shoelace formula applier (beta)
 
 ## Changelog
