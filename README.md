@@ -1,6 +1,6 @@
 # Fractals!
 ## Features
-**Latest version: 1.0.0**
+**Latest version: 1.0.0**<br>
 **Latest beta: 2.0.0 Iteration 1**
 
 - Fractal tree
