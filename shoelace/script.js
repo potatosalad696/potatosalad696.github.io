@@ -1,5 +1,13 @@
+/* todo
+- fix area (say incomplete if one is empty, invalid if nan, etc.)
+- add functionality for add and remove button (add = add vertex, remove = remove last vertex)
+- improve styling
+- reorganize index.html for every page
+*/
+
 vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
 
+// only for placeholders
 function gooGooGaaGaa() {
     alert("goo goo gaa gaa")
     return "goo goo gaa gaa"
@@ -11,6 +19,10 @@ function getVertices() {
     y = []
 
     for (i = 1; i <= vertexPairs; i++) {
+        if (document.getElementById(`x${i}`).value === "" || document.getElementById(`y${i}`).value === "") {
+            return "Incomplete"
+        }
+
         x.push(document.getElementById(`x${i}`).value)
         y.push(document.getElementById(`y${i}`).value)
     }
@@ -21,6 +33,10 @@ function getVertices() {
 }
 
 function calculateArea() {
+    if (getVertices() === "Incomplete") {
+        return "Incomplete"
+    }
+
     x = getVertices()[0]
     y = getVertices()[1]
 
@@ -38,7 +54,14 @@ function calculateArea() {
 
 function update() {
     area = calculateArea()
-    document.getElementById("area").innerHTML = `Area: ${area} unit²`
+    
+    if (area === "Incomplete") {
+        document.getElementById("area").innerHTML = "Incomplete"
+    } else if (isNaN(area)) {
+        document.getElementById("area").innerHTML = "Invalid"
+    } else {
+        document.getElementById("area").innerHTML = `Area: ${area} unit²`
+    }
 
     console.log("goo goo gaa gaa")
     /*
@@ -63,5 +86,5 @@ function _clear() {
         document.getElementById(`y${i}`).value = ""
     }
 
-    document.getElementById("area").innerHTML = "Area:"
+    document.getElementById("area").innerHTML = "Incomplete"
 }

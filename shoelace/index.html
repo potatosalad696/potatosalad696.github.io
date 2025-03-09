@@ -8,8 +8,7 @@
     </head>
     <body>
         <div class="area">
-            <button id="calculate" onclick="update()">Calculate</button>
-            <span id="area">Area:</span>
+            <span id="area">Incomplete</span>
         </div>
         <hr>
         <div class="manage">
@@ -19,18 +18,18 @@
         </div>
         <div class="coords">
             <div class="coord1">
-                <span>Vertex 1 (<input id="x1">,<input id="y1"> )</span>
+                <span>Vertex 1 (<input id="x1" oninput="update()">,<input id="y1" oninput="update()"> )</span>
             </div>
             <div class="coord2">
-                <span>Vertex 2 (<input id="x2">,<input id="y2"> )</span>
+                <span>Vertex 2 (<input id="x2" oninput="update()">,<input id="y2" oninput="update()"> )</span>
             </div>
             <div class="coord3">
-                <span>Vertex 3 (<input id="x3">,<input id="y3"> )</span>
+                <span>Vertex 3 (<input id="x3" oninput="update()">,<input id="y3" oninput="update()"> )</span>
             </div>
         </div>
     </body>
     <footer>
-        <p>Codename Shoelace - Iteration 1 - PotatoSalad_</p>
+        <p>Codename Shoelace - Iteration 1 - PotatoSalad_ | <a href="../index.html">Home Page</a></p>
     </footer>
     <script src="script.js"></script>
 </html>
