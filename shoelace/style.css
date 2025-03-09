@@ -3,6 +3,7 @@ body {
 }
 
 input {
+    margin-right: 0.25vw;
     margin-left: 0.25vw;
     width: 5vw
 }
