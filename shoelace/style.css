@@ -1,5 +1,62 @@
 body {
-    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #c7e9c0;
+    font-family: "Cambria Math";
+    text-align: center;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    height: 25vh;
+    background-color: #74c476;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 8vh;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #005a32;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0
+}
+
+nav ul li {
+    transition: 0.3s;
+    padding: 1vw 2vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem
+}
+
+nav ul li:hover {
+    background-color: #41ab5d;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 input {
@@ -16,12 +73,8 @@ button {
     margin-right: 0.25vw;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-right: 1vw;
-    text-align: right;
+button:hover {
+    cursor: pointer;
 }
 
 a {

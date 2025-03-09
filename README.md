@@ -1,15 +1,13 @@
 # Fractals!
 ## Features
 **Latest version: 1.0.0**<br>
-**Latest beta: 2.0.0 Iteration 1**
+**Latest iteration: 2.0.0 Iteration 2**
 
-- Fractal tree
-- Sierpinski triangle
-    - Draggable
-    - Zoomable
-    - Up to 10 iterations
-- Shoelace formula applier (beta)
-    - Only up to 3 vertices
+- Fractals
+    - Fractal tree
+    - Sierpinski triangle
+- Others
+    - Shoelace formula applier (beta)
 
 ## Changelog
 See [changelog](changelog.md)

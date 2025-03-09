@@ -5,6 +5,10 @@
 ## 2.0.0
 - Coming soon!
 
+### 2.0.0 Iteration 2
+- Shoelace formula can now accept infinite vertices
+- Added style to the shoelace formula page to match other pages
+
 ### 2.0.0 Iteration 1
 - Added shoelace formula applier
     - Only up to 3 vertices

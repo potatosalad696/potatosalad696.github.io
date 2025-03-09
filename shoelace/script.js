@@ -1,8 +1,6 @@
 /* todo
-- fix area (say incomplete if one is empty, invalid if nan, etc.)
-- add functionality for add and remove button (add = add vertex, remove = remove last vertex)
+- reorganize index.html for every page (half?)
 - improve styling
-- reorganize index.html for every page
 */
 
 vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
@@ -80,11 +78,52 @@ function update() {
 
 /* MANAGEMENT (ADD, REMOVE, CLEAR) */
 // turns out clear() doesnt work (idk why)
-function _clear() {
+function clearVertices() {
     for (i = 1; i <= vertexPairs; i++) {
         document.getElementById(`x${i}`).value = ""
         document.getElementById(`y${i}`).value = ""
     }
 
-    document.getElementById("area").innerHTML = "Incomplete"
+    update()
+}
+
+function addVertex() {
+    vertexPairs += 1
+
+    // create the "container"
+    const newVertex = document.createElement("div")
+    newVertex.id = `vertex${vertexPairs}`
+    document.getElementById("vertices").appendChild(newVertex)
+
+    // create the content
+    const vertexContent = document.createElement("span")
+    vertexContent.innerHTML = `Vertex ${vertexPairs} (<input id='x${vertexPairs}' oninput='update()'>,<input id='y${vertexPairs}' oninput='update()'>)`
+    document.getElementById(`vertex${vertexPairs}`).appendChild(vertexContent)
+
+    update()
+}
+
+function removeVertex() {
+    if (vertexPairs <= 3) {
+        update()
+        return
+    }
+
+    const vertexToRemove = document.getElementById(`vertex${vertexPairs}`)
+    vertexToRemove.remove()
+
+    vertexPairs -= 1
+    update()
+}
+
+function resetVertices() {
+    clearVertices()
+
+    for (i = 4; i <= vertexPairs; i++) {
+        const vertexToRemove = document.getElementById(`vertex${i}`)
+        vertexToRemove.remove()
+    }
+
+    vertexPairs = 3
+    update()
 }
