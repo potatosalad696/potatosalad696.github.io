@@ -8,12 +8,14 @@
     - Draggable
     - Zoomable
     - Up to 10 iterations
-- Shoelace formula applier (Beta)
-    - Only supports 3 vertices
+- Shoelace formula applier (beta)
+    - Only up to 3 vertices
 
 ## Changelog
-See [Changelog](changelog.md)
+See [changelog](changelog.md)
 
 ## Credits
-Made by potatosalad696<br>
-Collaborating with idkmyname-sys-Klish
+Made by:
+
+potatosalad696<br>
+idkmyname-sys-Klish
