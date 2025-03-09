@@ -7,7 +7,7 @@
 
 ### 2.0.0 Iteration 1
 - Added shoelace formula applier
-    - Only support 3 vertices
+    - Only supports 3 vertices
 - Reorganized code
 
 ## 1.0.0

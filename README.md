@@ -9,7 +9,7 @@
     - Zoomable
     - Up to 10 iterations
 - Shoelace formula applier (Beta)
-    - Only support 3 vertices
+    - Only supports 3 vertices
 
 ## Changelog
 See [Changelog](changelog.md)
