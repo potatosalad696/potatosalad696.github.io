@@ -1,13 +1,13 @@
 # Fractals!
 ## Features
 **Latest version: 1.0.0**<br>
-**Latest iteration: 2.0.0 Iteration 2**
+**Latest iteration: 2.0.0 Iteration 3**
 
 - Fractals
     - Fractal tree
     - Sierpinski triangle
 - Tools
-    - Shoelace formula applier (beta)
+    - **[BETA]** Shoelace formula (with visualizer)
 
 ## Changelog
 See [changelog](changelog.md)

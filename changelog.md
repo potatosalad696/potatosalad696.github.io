@@ -5,6 +5,10 @@
 ## 2.0.0
 - Coming soon!
 
+### 2.0.0 Iteration 3
+- Added a visualizer for shoelace formula
+    - The visualizer currently is extremely buggy, and we are actively trying to fix the issues.
+
 ### 2.0.0 Iteration 2
 - Added functionalities to the "add" and "remove" button
 - Added a new button: the "reset" button

@@ -1,8 +1,3 @@
-/* todo
-- reorganize index.html for every page (half?)
-- improve styling
-*/
-
 vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
 
 // only for placeholders
@@ -59,6 +54,7 @@ function update() {
         document.getElementById("area").innerHTML = "Invalid"
     } else {
         document.getElementById("area").innerHTML = `Area: ${area} unit²`
+        graph()
     }
 
     console.log("goo goo gaa gaa")
@@ -126,4 +122,51 @@ function resetVertices() {
 
     vertexPairs = 3
     update()
+}
+
+/* GRAPH */
+board = JXG.JSXGraph.initBoard("jxgbox", {
+    grid: {
+        theme: 3 // with minor grids
+    }
+})
+
+xAxis = board.create("axis", [[-1, 0], [1, 0]], {
+    ticks: {
+        strokeColor: "blue",
+        strokeWidth: 2,
+        minorticks: 3,
+        majorHeight: 10,
+        drawZero: true
+    }
+})
+
+yAxis = board.create("axis", [[0, -1], [0, 1]], {
+    ticks: {
+        strokeColor: "green",
+        strokeWidth: 2,
+        minorticks: 3,
+        majorHeight: 10,
+        drawZero: true
+    }
+})
+
+grid = board.create("grid", [xAxis, yAxis])
+
+function graph() {
+    x = getVertices()[0]
+    y = getVertices()[1]
+    pointPairs = []
+
+    for (i = 0; i < vertexPairs; i++) {
+        pair = [x[i], y[i]]
+        pointPairs.push(pair)
+
+        p = board.create("point", [x[i], y[i]], {
+            name: `Vertex ${i + 1}`,
+            fixed: true
+        })
+    }
+
+    s = board.create("polygon", pointPairs)
 }
