@@ -7,7 +7,7 @@
     - Fractal tree
     - Sierpinski triangle
 - Tools
-    - **[BETA]** Shoelace formula (with visualizer)
+    - **[BETA]** Shoelace formula (with a visualizer)
 
 ## Changelog
 See [changelog](changelog.md)
