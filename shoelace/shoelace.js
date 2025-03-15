@@ -137,7 +137,7 @@ xAxis = board.create("axis", [[-1, 0], [1, 0]], {
         strokeWidth: 2,
         minorticks: 3,
         majorHeight: 10,
-        drawZero: true
+        drawZero: true,
     }
 })
 
@@ -147,7 +147,7 @@ yAxis = board.create("axis", [[0, -1], [0, 1]], {
         strokeWidth: 2,
         minorticks: 3,
         majorHeight: 10,
-        drawZero: true
+        drawZero: true,
     }
 })
 
@@ -156,17 +156,13 @@ grid = board.create("grid", [xAxis, yAxis])
 function graph() {
     x = getVertices()[0]
     y = getVertices()[1]
-    pointPairs = []
 
     for (i = 0; i < vertexPairs; i++) {
-        pair = [x[i], y[i]]
-        pointPairs.push(pair)
-
         p = board.create("point", [x[i], y[i]], {
             name: `Vertex ${i + 1}`,
             fixed: true
         })
     }
 
-    s = board.create("polygon", pointPairs)
+    s = board.create("polygon", [...Array(vertexPairs).keys()].map(i => `Vertex ${i + 1}`))
 }

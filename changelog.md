@@ -2,8 +2,11 @@
 
 [Back to README](README.md)
 
-## 2.0.0
-- Coming soon!
+## 2.0.0 - Redesigning Tools
+
+### 2.0.0 Iteration 4
+- Changed the color palette for the shoelace formula page to periwinkle
+- Fixed a bug where a "ghost point" would spawn at (0, 0)
 
 ### 2.0.0 Iteration 3
 - Added a visualizer for the shoelace formula
@@ -16,10 +19,11 @@
 - Added style to the shoelace formula page to match other pages
 
 ### 2.0.0 Iteration 1
-- Added shoelace formula applier
+- Added a shoelace formula applier
     - Only up to 3 vertices
 - Reorganized code
 
-## 1.0.0
-- Added fractal tree with its features
-- Added Sierpinski triangle with its features
+## 1.0.0 - Initial Release
+- Added fractals, such as:
+    - Fractal tree
+    - Sierpinski triangle
