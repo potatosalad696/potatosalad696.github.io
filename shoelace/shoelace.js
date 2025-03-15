@@ -1,4 +1,4 @@
-vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
+let vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
 
 // only for placeholders
 function gooGooGaaGaa() {
@@ -8,8 +8,8 @@ function gooGooGaaGaa() {
 
 /* SHOELACE */
 function getVertices() {
-    x = []
-    y = []
+    let x = []
+    let y = []
 
     for (i = 1; i <= vertexPairs; i++) {
         if (document.getElementById(`x${i}`).value === "" || document.getElementById(`y${i}`).value === "") {
@@ -30,23 +30,25 @@ function calculateArea() {
         return "Incomplete"
     }
 
-    x = getVertices()[0]
-    y = getVertices()[1]
+    let x = getVertices()[0]
+    let y = getVertices()[1]
 
-    sum1 = 0
-    sum2 = 0
+    let sum1 = 0
+    let sum2 = 0
 
     for (i = 0; i < vertexPairs; i++) {
         sum1 += x[i] * y[i + 1]
         sum2 += y[i] * x[i + 1]
     }
 
-    area = Math.abs(sum1 - sum2) / 2
+    let area = Math.abs(sum1 - sum2) / 2
     return area
 }
 
 function update() {
-    area = calculateArea()
+    clearGraph()
+    
+    let area = calculateArea()
     
     if (area === "Incomplete") {
         document.getElementById("area").innerHTML = "Incomplete"
@@ -87,12 +89,12 @@ function addVertex() {
     vertexPairs += 1
 
     // create the "container"
-    const newVertex = document.createElement("div")
+    let newVertex = document.createElement("div")
     newVertex.id = `vertex${vertexPairs}`
     document.getElementById("vertices").appendChild(newVertex)
 
     // create the content
-    const vertexContent = document.createElement("span")
+    let vertexContent = document.createElement("span")
     vertexContent.innerHTML = `Vertex ${vertexPairs} (<input id='x${vertexPairs}' oninput='update()'>,<input id='y${vertexPairs}' oninput='update()'>)`
     document.getElementById(`vertex${vertexPairs}`).appendChild(vertexContent)
 
@@ -105,7 +107,7 @@ function removeVertex() {
         return
     }
 
-    const vertexToRemove = document.getElementById(`vertex${vertexPairs}`)
+    let vertexToRemove = document.getElementById(`vertex${vertexPairs}`)
     vertexToRemove.remove()
 
     vertexPairs -= 1
@@ -116,7 +118,7 @@ function resetVertices() {
     clearVertices()
 
     for (i = 4; i <= vertexPairs; i++) {
-        const vertexToRemove = document.getElementById(`vertex${i}`)
+        let vertexToRemove = document.getElementById(`vertex${i}`)
         vertexToRemove.remove()
     }
 
@@ -125,13 +127,13 @@ function resetVertices() {
 }
 
 /* GRAPH */
-board = JXG.JSXGraph.initBoard("jxgbox", {
+let board = JXG.JSXGraph.initBoard("jxgbox", {
     grid: {
         theme: 3 // with minor grids
     }
 })
 
-xAxis = board.create("axis", [[-1, 0], [1, 0]], {
+let xAxis = board.create("axis", [[-1, 0], [1, 0]], {
     ticks: {
         strokeColor: "blue",
         strokeWidth: 2,
@@ -141,7 +143,7 @@ xAxis = board.create("axis", [[-1, 0], [1, 0]], {
     }
 })
 
-yAxis = board.create("axis", [[0, -1], [0, 1]], {
+let yAxis = board.create("axis", [[0, -1], [0, 1]], {
     ticks: {
         strokeColor: "green",
         strokeWidth: 2,
@@ -151,18 +153,28 @@ yAxis = board.create("axis", [[0, -1], [0, 1]], {
     }
 })
 
-grid = board.create("grid", [xAxis, yAxis])
+board.create("grid", [xAxis, yAxis])
 
 function graph() {
-    x = getVertices()[0]
-    y = getVertices()[1]
+    let x = getVertices()[0]
+    let y = getVertices()[1]
 
     for (i = 0; i < vertexPairs; i++) {
-        p = board.create("point", [x[i], y[i]], {
+        board.create("point", [x[i], y[i]], {
             name: `Vertex ${i + 1}`,
             fixed: true
         })
     }
 
-    s = board.create("polygon", [...Array(vertexPairs).keys()].map(i => `Vertex ${i + 1}`))
+    board.create("polygon", [...Array(vertexPairs).keys()].map(i => `Vertex ${i + 1}`), {
+        name: "Polygon"
+    })
+}
+
+function clearGraph() {
+    board.removeObject("Polygon")
+
+    for (i = 1; i <= vertexPairs; i++) {
+        board.removeObject(`Vertex ${i}`)
+    }
 }

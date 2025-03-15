@@ -3,6 +3,11 @@
 [Back to README](README.md)
 
 ## 2.0.0 - Redesigning Tools
+### 2.0.0 Iteration 5
+- Revamped the layout of the shoelace formula page
+- Revamped the footer (credit and version number)
+- The shoelace formula visualizer now refreshes after each change made to the vertices
+
 ### 2.0.0 Iteration 4
 - Changed the color palette for the shoelace formula page to periwinkle
 - Fixed a bug where a "ghost point" would spawn at (0, 0)
