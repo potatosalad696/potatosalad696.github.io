@@ -1,6 +1,6 @@
 # Fractals!
 ## Features
-**Latest version: 1.0.0**<br>
+**Latest version: 1.0.0 - Initial Release**<br>
 **Latest iteration: 2.0.0 Iteration 4**
 
 - Fractals
