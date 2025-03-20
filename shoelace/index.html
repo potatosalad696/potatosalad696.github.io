@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="shoelace.css">
+        <title>Shoelace Formula</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+        <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css">
+    </head>
+    <header>
+        <h1>Shoelace Formula</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../">Main Page</a></li>
+            <li><a href="../sierpinski">Sierpinski Triangle</a></li>
+            <li><a href="../tree">Fractal Tree</a></li>
+        </ul>
+    </nav>
+    <body>
+        <div class="container">
+            <div id="jxgbox" class="jxgbox"></div>
+            <div class="content">
+                <div id="area">
+                    <span id="area">Incomplete</span>
+                </div>
+                <div id="manage">
+                    <button id="add" onclick="addVertex()">Add</button>
+                    <button id="remove" onclick="removeVertex()">Remove</button>
+                    <button id="clear" onclick="clearVertices()">Clear</button>
+                    <button id="reset" onclick="resetVertices()">Reset</button><br>
+                </div>
+                <div id="vertices">
+                    <div id="vertex1">
+                        <span>Vertex 1 (<input id="x1" oninput="update()">,<input id="y1" oninput="update()">)</span>
+                    </div>
+                    <div id="vertex2">
+                        <span>Vertex 2 (<input id="x2" oninput="update()">,<input id="y2" oninput="update()">)</span>
+                    </div>
+                    <div id="vertex3">
+                        <span>Vertex 3 (<input id="x3" oninput="update()">,<input id="y3" oninput="update()">)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="shoelace.js"></script>
+    </body>
+    <footer>
+        <p>PotatoSalad_</p>
+        <p>2.0.0 Iteration 5</p>
+    </footer>
+</html>

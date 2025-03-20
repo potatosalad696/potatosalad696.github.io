@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #c7e9c0;
+    background-color: #dbeaff;
     font-family: "Cambria Math";
     text-align: center;
 }
@@ -11,7 +11,7 @@ header {
     display: flex;
     text-align: center;
     height: 25vh;
-    background-color: #74c476;
+    background-color: #a9bcff;
     justify-content: center;
     align-items: center;
 }
@@ -27,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #005a32;
+    background-color: #484d7e;
 }
 
 nav ul {
@@ -48,8 +48,44 @@ nav ul li a {
 }
 
 nav ul li:hover {
-    background-color: #41ab5d;
+    background-color: #818ae2;
     cursor: pointer;
+}
+
+input {
+    margin-right: 0.25vw;
+    margin-left: 0.25vw;
+    width: 5vw;
+}
+
+div {
+    margin-top: 1vh;
+}
+
+button {
+    margin-right: 0.25vw;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    color: black;
+}
+
+.jxgbox {
+    width: 50vh;
+    height: 50vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content, .jxgbox {
+    margin: 5vw;
 }
 
 footer {

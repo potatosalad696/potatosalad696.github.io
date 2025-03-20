@@ -1,16 +1,19 @@
 # Fractals!
 ## Features
-<b>Latest version: 1.0.0</b>
+**Latest version: 1.0.0**<br>
+**Latest iteration: 2.0.0 Iteration 5**
 
-- Fractal tree
-- Sierpinski triangle
-    - Draggable
-    - Zoomable
-    - Up to 10 iterations
+- Fractals
+    - Fractal tree
+    - Sierpinski triangle
+- Tools
+    - **[BETA]** Shoelace formula (with a visualizer)
 
 ## Changelog
-See [Changelog](changelog.md)
+See [changelog](changelog.md)
 
 ## Credits
-Made by potatosalad696<br>
-Collaborating with idkmyname-sys-Klish
+Made by:
+
+potatosalad696<br>
+idkmyname-sys-Klish

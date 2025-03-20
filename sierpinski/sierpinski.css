@@ -33,7 +33,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    margin: 0
+    margin: 0;
 }
 
 nav ul li {
@@ -44,7 +44,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
 
 nav ul li:hover {
@@ -52,9 +52,15 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-.footer {
+footer {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 1vw;
 }
