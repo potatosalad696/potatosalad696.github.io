@@ -7,11 +7,11 @@ txt.innerHTML = iter.value
 
 iter.oninput = () => {
     txt.innerHTML = iter.value
-    regenerateTriangles(iter.value) 
+    regenerateTriangles(iter.value, 1) 
 }
 
 /* RENDERING */
-let btripoints = []
+let btris = []
 let zoom = 1
 let offsetX = 0
 let offsetY = 0
@@ -23,13 +23,19 @@ let canvaswidth = 0
 let canvasheight = 0
 let canvasmiddle = 0
 
-function genblacktriangles(iterations) {
+function genblacktriangles(iterations, trianglenumber) { // triangle number = 1 if first triangle
     // Trianle position: s = side length, h = height of canvas: s = 2h/sqrt(3)
     // Order of points: x1, y1, x2, y2, x3, y3 (Anti Clockwise)
     // (0, 0) is top left corner
     let largeBtrisideL = (2 * canvasheight) / (sqrt(3))
     let largeBtrihalfsideL = largeBtrisideL / 2
-    let tempBtripoints = [[canvasmiddle - largeBtrihalfsideL, canvasheight, canvasmiddle, 0, canvasmiddle + largeBtrihalfsideL, canvasheight]] // canvasheight - (canvasheight/2) * Math.sqrt(2)
+    let tempBtripoints
+    if (trianglenumber == 1) {
+        tempBtripoints = [[canvasmiddle - largeBtrihalfsideL, canvasheight, canvasmiddle, 0, canvasmiddle + largeBtrihalfsideL, canvasheight]] // canvasheight - (canvasheight/2) * Math.sqrt(2)
+    } else {
+        tempBtripoints = [[(canvasmiddle - largeBtrihalfsideL) + (largeBtrisideL*trianglenumber), canvasheight, canvasmiddle + (largeBtrihalfsideL*trianglenumber), 0, canvasmiddle + largeBtrihalfsideL, canvasheight]] // canvasheight - (canvasheight/2) * Math.sqrt(2)
+    }
+    
 
     for (let i = 0; i < iterations; i++) {
         let newtri = []
@@ -69,17 +75,19 @@ function setup() {
     noStroke()
     fill(1)
 
-    btripoints = genblacktriangles(iter.value)
+    btris[0] = genblacktriangles(iter.value, 1)
+    btris[1] = genblacktriangles(iter.value, 2)
 }
 
 function draw() {
     background(255)
     fill(0)
-    btripoints.forEach(drawtri)
+    btris.forEach().forEach(drawtri)
 }
 
 function regenerateTriangles(iterations) {
-    btripoints = genblacktriangles(iterations)
+    btris[0] = genblacktriangles(iter.value, 1)
+    btris[1] = genblacktriangles(iter.value, 2)
 }
 
 function mouseWheel(event) {
