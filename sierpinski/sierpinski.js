@@ -77,10 +77,12 @@ function setup() {
     fill(1)
 
     btripoints = genblacktriangles(iter.value, 1)
-    btris[0] = genblacktriangles(iter.value, 1)
+    btris[0] = btripoints
+    //btris.push(genblacktriangles(iter.value, 1))
     if (btripoints != btris[0]) {
+        let added = btris[0].filter(item => !btripoints.includes(item));
+        alert("added : " + added)
         alert("haiiya")
-        alert()
     }
     // btris[0] = genblacktriangles(iter.value, 1)
     // alert(btris[0])
