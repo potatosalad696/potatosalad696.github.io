@@ -1,0 +1,50 @@
+* {
+    font-family: "Cambria Math";
+}
+
+.fractals {
+    background-color: #c7e9c0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools {
+    background-color: #dbeaff;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* todo: responsiveness for mobile */
+p {
+    font-size: 3vw
+}
+/* todo end */
+
+body div {
+    transition-duration: 0.5s;
+}
+
+body div:hover {
+    cursor: pointer;
+}
+
+.fractals:hover {
+    background-color: #74c476;
+}
+
+.tools:hover {
+    background-color: #a9bcff;
+}
