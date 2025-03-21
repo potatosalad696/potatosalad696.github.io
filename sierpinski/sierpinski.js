@@ -11,7 +11,7 @@ iter.oninput = () => {
 }
 
 /* RENDERING */
-let btris = []
+let btris = [[]]
 let zoom = 1
 let offsetX = 0
 let offsetY = 0
