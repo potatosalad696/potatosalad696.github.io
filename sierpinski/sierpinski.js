@@ -7,11 +7,12 @@ txt.innerHTML = iter.value
 
 iter.oninput = () => {
     txt.innerHTML = iter.value
-    regenerateTriangles(iter.value, 1) 
+    regenerateTriangles(iter.value) 
 }
 
 /* RENDERING */
-let btris = [[]]
+let btripoints = []
+let btris = []
 let zoom = 1
 let offsetX = 0
 let offsetY = 0
@@ -75,19 +76,36 @@ function setup() {
     noStroke()
     fill(1)
 
+    btripoints = genblacktriangles(iter.value, 1)
     btris[0] = genblacktriangles(iter.value, 1)
-    btris[1] = genblacktriangles(iter.value, 2)
+    if (btripoints != btris[0]) {
+        alert("haiiya")
+        alert()
+    }
+    // btris[0] = genblacktriangles(iter.value, 1)
+    // alert(btris[0])
+    // btris[1] = genblacktriangles(iter.value, 2)
+    // alert("#2 " + btris[1])
 }
 
 function draw() {
     background(255)
     fill(0)
-    btris.forEach().forEach(drawtri)
+
+    btripoints.forEach(drawtri)
+
+    // let i = 0;
+    // while (i < scores.length) {
+    //     alert(i)
+    //     i++;
+    // }
+    // btris.forEach().forEach(drawtri)
 }
 
 function regenerateTriangles(iterations) {
-    btris[0] = genblacktriangles(iter.value, 1)
-    btris[1] = genblacktriangles(iter.value, 2)
+    btripoints = genblacktriangles(iter.value, 1)
+    // btris[0] = genblacktriangles(iter.value, 1)
+    // btris[1] = genblacktriangles(iter.value, 2)
 }
 
 function mouseWheel(event) {
