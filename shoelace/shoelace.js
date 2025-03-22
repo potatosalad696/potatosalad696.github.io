@@ -1,3 +1,4 @@
+// vertexPairs = number of points
 let vertexPairs = 3 // ik this is bad practice, but this entire website is terrible by itself, so why not?
 
 // only for placeholders
