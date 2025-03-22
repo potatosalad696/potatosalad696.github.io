@@ -29,7 +29,8 @@ body {
 
 /* todo: responsiveness for mobile */
 p {
-    font-size: 3vw
+    font-size: 3vw;
+    font-family: UnifrakturMaguntia;
 }
 /* todo end */
 
@@ -60,4 +61,5 @@ footer p {
     margin: 1vw;
     font-size: unset;
     text-align: center;
+    font-family: unset;
 }
