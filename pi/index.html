@@ -11,9 +11,27 @@
             <p id="points">0 point(s) (0 inside, 0 outside)</p>
         </div>
         <div class="buttons">
-            <button onclick="update()">Add</button>
+            <button onclick="updatePi()">Add</button>
+            <button onclick="incrementer()">Start</button>
+            <button onclick="stopIncrementer()">Stop</button>
             <button onclick="reset()">Reset</button>
         </div>
+        <!-- <p>Worse than: 3.14, 22/7, 355/113</p>
+        <span>Limit: </span><input> -->
         <script src="pi.js"></script>
     </body>
 </html>
+
+<!--
+
+IDEAS:
+A "worse/better than" indicator to measure how good/bad the approximation is compared to common approximations,
+such as 3.14, 22/7, and 355/113
+
+A limit for the incrementer. Input a number, and the incrementer will stop when it reaches that number. Also show the progress
+percentage to the incrementer, to see how close it is to being finished
+
+A graph to display the points. It will have a circle, a square, green points representing points which are inside
+the circle, and red points for the outside points
+
+-->

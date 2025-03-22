@@ -2,6 +2,8 @@ let points = 0
 let outside = 0
 let inside = 0
 
+let increment // for incrementer
+
 function isPointInside() {
     let point = [2 * Math.random() - 1, 2 * Math.random() - 1]
 
@@ -16,7 +18,7 @@ function piApproximation() {
     return (inside / points) * 4
 }
 
-function update() {
+function updatePi() {
     points += 1
 
     isPointInside()
@@ -26,10 +28,20 @@ function update() {
     document.getElementById("points").innerHTML = `${points} point(s) (${inside} inside, ${outside} outside)`
 }
 
+function incrementer() {
+    increment = setInterval(updatePi, 10)
+}
+
+function stopIncrementer() {
+    clearInterval(increment)
+}
+
 function reset() {
     points = 0
     outside = 0
     inside = 0
+
+    stopIncrementer()
 
     document.getElementById("approx").innerHTML = `π ≈ 0 (${Math.PI} off)`
     document.getElementById("points").innerHTML = `${points} point(s) (${inside} inside, ${outside} outside)`
