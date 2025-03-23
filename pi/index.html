@@ -7,7 +7,8 @@
     </head>
     <body>
         <div class="content">
-            <p id="approx">π ≈ 0 (3.141592653589793 off)</p>
+            <p id="approx">π ≈ 0</p>
+            <p id="error">Error = -3.141592653589793</p>
             <p id="points">0 point(s) (0 inside, 0 outside)</p>
         </div>
         <div class="buttons">
@@ -16,8 +17,15 @@
             <button onclick="stopIncrementer()">Stop</button>
             <button onclick="reset()">Reset</button>
         </div>
-        <!-- <p>Worse than: 3.14, 22/7, 355/113</p>
-        <span>Limit: </span><input> -->
+        <div class="rank">
+            <p>Rank (from best to worse):</p>
+            <ol>
+                <li id="frac2">355/113</li>
+                <li id="frac1">22/7</li>
+                <li id="decimal">3.14</li>
+                <b><li id="thisapprox">This approximation</li></b>
+            </ol>
+        </div>
         <script src="pi.js"></script>
     </body>
 </html>

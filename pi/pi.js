@@ -24,7 +24,8 @@ function updatePi() {
     isPointInside()
     const approx = piApproximation()
 
-    document.getElementById("approx").innerHTML = `π ≈ ${approx} (${Math.abs(Math.PI - approx)} off)`
+    document.getElementById("approx").innerHTML = `π ≈ ${approx}`
+    document.getElementById("error").innerHTML = `Error = ${approx - Math.PI}`
     document.getElementById("points").innerHTML = `${points} point(s) (${inside} inside, ${outside} outside)`
 }
 
@@ -43,6 +44,7 @@ function reset() {
 
     stopIncrementer()
 
-    document.getElementById("approx").innerHTML = `π ≈ 0 (${Math.PI} off)`
+    document.getElementById("approx").innerHTML = `π ≈ 0`
+    document.getElementById("error").innerHTML = `Error = ${0 - Math.PI}`
     document.getElementById("points").innerHTML = `${points} point(s) (${inside} inside, ${outside} outside)`
 }
