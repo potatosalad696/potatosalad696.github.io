@@ -17,13 +17,19 @@
             <button onclick="stopIncrementer()">Stop</button>
             <button onclick="reset()">Reset</button>
         </div>
+        <hr>
+        <div class="best">
+            <p id="best">Best approximation: 0 (N/A)</p>
+            <p id="besterror">Error = -3.141592653589793</p>
+        </div>
+        <hr>
         <div class="rank">
             <p>Rank (from best to worse) (under dev):</p>
-            <ol>
-                <li id="frac2">355/113</li>
-                <li id="frac1">22/7</li>
-                <li id="decimal">3.14</li>
-                <b><li id="thisapprox">This approximation</li></b>
+            <ol id="rank">
+                <li>355/113</li>
+                <li>22/7</li>
+                <li>3.14</li>
+                <li><b>Best approximation</b> - <i>Current approximation</i></li>
             </ol>
         </div>
         <script src="pi.js"></script>
