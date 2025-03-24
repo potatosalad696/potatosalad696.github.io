@@ -1,60 +1,56 @@
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: #c7e9c0;
+* {
     font-family: "Cambria Math";
-    text-align: center;
 }
 
-header {
+.fractals {
+    background-color: #c7e9c0;
+    width: 50vw;
+    height: 100vh;
     display: flex;
-    text-align: center;
-    height: 25vh;
-    background-color: #74c476;
     justify-content: center;
     align-items: center;
 }
 
-header h1 {
-    font-size: 8vh;
-    font-family: "UnifrakturMaguntia", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-nav {
+.tools {
+    background-color: #dbeaff;
+    width: 50vw;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: #005a32;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
+body {
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav ul li {
-    transition: 0.3s;
-    padding: 1vw 2vw;
+/* todo: responsiveness for mobile */
+p {
+    font-size: 3vw;
+    font-family: UnifrakturMaguntia;
+}
+/* todo end */
+
+body div {
+    transition-duration: 0.5s;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.25rem;
-}
-
-nav ul li:hover {
-    background-color: #41ab5d;
+body div:hover {
     cursor: pointer;
 }
 
+.fractals:hover {
+    background-color: #74c476;
+}
+
+.tools:hover {
+    background-color: #a9bcff;
+}
+
 footer {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -63,4 +59,7 @@ footer {
 
 footer p {
     margin: 1vw;
+    font-size: unset;
+    text-align: center;
+    font-family: unset;
 }

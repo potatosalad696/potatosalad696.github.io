@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sierpinski Triangle</title>
-        <link rel="stylesheet" type="text/css" href="sierpinski.css">
+        <title>Fractal Tree</title>
+        <link rel="stylesheet" type="text/css" href="tree.css">
         <script src="libraries/p5.min.js"></script>
         <script src="libraries/p5.sound.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +12,17 @@
         <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     </head>
     <header>
-        <h1>Sierpinski Triangle</h1>
+        <h1>Fractal Tree</h1>
     </header>
     <nav>
         <ul>
             <li><a href="../">Main Page</a></li>
-            <li><a href="../tree">Fractal Tree</a></li>
-            <li><a href="../shoelace">Shoelace Formula (beta)</a></li>
+            <li><a href="../sierpinski">Sierpinski Triangle</a></li>
         </ul>
     </nav>
     <body>
-        <p>Iteration <input type="range" min="0" max="10" value="5" id="iteration"> <span id="txt"></span> iteration(s)</p>
-        <!-- <p>Shape: Flat <input type="range" min="1" max="10" value="3" id="triangleshape"> Tall</p> -->
-        <script src="sierpinski.js"></script>
+        <p>Angle <input type="range" min="0" max="90" value="20" id="angle"> <span id="txt"></span>˚</p>
+        <script src="tree.js"></script>
     </body>
     <footer>
         <p>PotatoSalad_</p>
