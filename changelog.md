@@ -1,5 +1,6 @@
-# 1.0.0
+# Changelog
 
-## Iteration 1
+## 1.0.0
 
+### Iteration 1
 - Under development
